@@ -4,7 +4,7 @@ var smtpTransport = mailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
         user: "britonano@gmail.com",
-        pass: "akilles1"
+        pass: ""
     }
 });
 
