@@ -1,0 +1,30 @@
+Escrevendo em um arquivo.
+Para escrever em um arquivo também não existem mistérios, utilizamos o método writeFile.
+
+fs.writeFile('./arquivos/message.txt', 'Hello World!\n',{enconding:'utf-8',flag: 'a'}, function (err) {
+    if (err) throw err;
+    console.log('Arquivo salvo!');
+});
+Este método assim como o anterior também recebe o caminho do arquivo, porém agora recebe o que iremos escrever como segundo parâmetro, um terceiro parâmetro que é opcional, e a função callback.
+
+Como terceiro parâmetro passei um objeto com a codificação que desejo e com a forma que quero que seja escrito o arquivo, na mensagem passei um \n ao final do Hello World, para que toda vez que escreva no arquivo comece na próxima linha.
+
+Flags
+Flags para operações de leitura / gravação são:
+
+FLAG	DESCRIÇÃO
+r	Abre o arquivo para leitura. Uma exceção ocorre se o arquivo não existe.
+r+	Abre o arquivo para leitura e escrita. Uma exceção ocorre se o arquivo não existe.
+rs	Arquivo aberto para leitura no modo síncrono.
+rs+	Arquivo aberto para leitura e escrita, contando a OS para abri-lo de forma síncrona.
+w	Abre o arquivo para escrita. O arquivo é criado (se não existir) ou truncado (se existir).
+wx	Como ‘w’, mas não consegue se existe caminho.
+w+	Abre o arquivo para leitura e escrita. O arquivo é criado (se não existir) ou truncado (se existir).
+wx+	Como ‘w+’, mas não consegue se existe caminho.
+a	Abre o arquivo para acrescentar. O arquivo é criado se ele não existe.
+ax	Como ‘a’, mas não consegue se existe caminho.
+a+	Abre o arquivo para leitura e acrescentando. O arquivo é criado se ele não existe.
+ax+	Como ‘a+’, mas não consegue se existe caminho.
+Para mais informações consulte o site do node sobre a api fs.
+
+Faça download do código aqui!
