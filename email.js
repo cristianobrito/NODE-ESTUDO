@@ -17,7 +17,7 @@ async function main() {
     secure: false, // true for 465, false for other ports
     auth: {
       user: "britonano@gmail.com", // generated ethereal user
-      pass: "akilles1", // generated ethereal password
+      pass: "", // generated ethereal password
     },
   });
 
